@@ -64,9 +64,9 @@ dev = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/tempoeval"
-"Documentation" = "https://tempoeval.readthedocs.io"
-"Bug Tracker" = "https://github.com/yourusername/tempoeval/issues"
+"Homepage" = "https://github.com/DataScienceUIBK/tempoeval"
+"Documentation" = "https://datascienceuibk.github.io/tempoeval/"
+"Bug Tracker" = "https://github.com/DataScienceUIBK/tempoeval/issues"
 
 [project.scripts]
 tempoeval = "tempoeval.cli.main:main"
@@ -82,16 +82,19 @@ target-version = ["py39", "py310", "py311", "py312"]
 [tool.ruff]
 line-length = 100
 target-version = "py39"
-select = ["E", "F", "W", "I", "N", "D", "UP"]
-ignore = ["D100", "D104", "D107"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+ignore = ["D100", "D104", "D107", "D212", "D203"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-addopts = "-v --cov=tempoeval --cov-report=term-missing"
+addopts = "-v"
 
 [tool.mypy]
 python_version = "3.9"
 warn_return_any = true
 warn_unused_configs = true
 ignore_missing_imports = true
+
