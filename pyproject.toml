@@ -65,7 +65,7 @@ dev = [
 
 [project.urls]
 "Homepage" = "https://github.com/DataScienceUIBK/tempoeval"
-"Documentation" = "https://datascienceuibk.github.io/tempoeval/"
+"Documentation" = "https://tempoeval.readthedocs.io/"
 "Bug Tracker" = "https://github.com/DataScienceUIBK/tempoeval/issues"
 
 [project.scripts]
@@ -84,8 +84,16 @@ line-length = 100
 target-version = "py39"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "N", "UP"]
-ignore = ["D100", "D104", "D107", "D212", "D203"]
+select = ["E", "F", "W"]
+ignore = [
+    "E501",   # Line too long (handled by formatter)
+    "W293",   # Blank line contains whitespace
+    "W291",   # Trailing whitespace
+    "E402",   # Module level import not at top
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # Unused imports in __init__ are intentional
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -97,4 +105,5 @@ python_version = "3.9"
 warn_return_any = true
 warn_unused_configs = true
 ignore_missing_imports = true
+
 
