@@ -64,4 +64,5 @@ print(f"Average Temporal NDCG: {sum(scores)/len(scores)}")
 
 ## Next Steps
 
-Check out the full [Experiments](../experiments/index.md) scripts to see this implemented at scale.
+Check out our [examples on GitHub](https://github.com/DataScienceUIBK/tempoeval/tree/main/examples) to see this implemented at scale.
+

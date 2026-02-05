@@ -203,7 +203,4 @@ nav:
       - LLM Providers: references/api/llm_providers.md
       - Retrievers: references/api/retrievers.md
       - Efficiency: references/api/efficiency.md
-  - Experiments:
-      - experiments/index.md
-      - Extraction Ablation: experiments/extraction_ablation.md
-      - Generation & Reasoning: experiments/generation_reasoning.md
+

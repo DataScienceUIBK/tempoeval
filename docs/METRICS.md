@@ -1037,9 +1037,9 @@ temposcore = TempoScore(weights={
 
 ## See Also
 
-- [README.md](../README.md) - Main documentation
-- [VISUAL_GUIDE.md](../VISUAL_GUIDE.md) - Visual diagrams and comparisons
-- [Examples](../examples/) - Practical code examples
+- [Home](index.md) - Main documentation
+- [Quick Start](getstarted/quickstart.md) - Get started guide
+- [Tutorials](tutorials/index.md) - Practical guides
 
 ---
 

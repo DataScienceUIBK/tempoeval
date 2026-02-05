@@ -7,7 +7,7 @@
 **TempoEval** is a comprehensive framework for evaluating the temporal reasoning capabilities of RAG (Retrieval-Augmented Generation) systems with 20+ specialized metrics.
 
 [Get Started](getstarted/index.md){ .md-button .md-button--primary }
-[View on GitHub](https://github.com/tempo26/TempoEval){ .md-button }
+[View on GitHub](https://github.com/DataScienceUIBK/tempoeval){ .md-button }
 
 </div>
 
@@ -102,13 +102,13 @@ Traditional RAG evaluation metrics (like precision/recall on text overlap) fail 
 
     [:octicons-arrow-right-24: Quick Start](getstarted/quickstart.md)
 
--   :material-test-tube:{ .lg .middle } **Pre-built Experiments**
+-   :material-test-tube:{ .lg .middle } **Examples**
 
     ---
 
-    Benchmark your system instantly with our experiment suite and reproduce published results.
+    Explore our comprehensive examples to learn how to use TempoEval effectively.
 
-    [:octicons-arrow-right-24: Run Experiments](experiments/index.md)
+    [:octicons-arrow-right-24: View Examples](tutorials/index.md)
 
 </div>
 
@@ -160,7 +160,7 @@ print(f"Temporal Precision@2: {score}")  # 0.5 (1/2 relevant)
 
     Star us on GitHub and contribute to the project.
 
-    [:octicons-arrow-right-24: tempo26/TempoEval](https://github.com/tempo26/TempoEval)
+    [:octicons-arrow-right-24: DataScienceUIBK/tempoeval](https://github.com/DataScienceUIBK/tempoeval)
 
 -   :fontawesome-brands-python:{ .lg .middle } **PyPI**
 
