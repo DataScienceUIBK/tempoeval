@@ -403,13 +403,7 @@ Full documentation is available at: **[https://aa17626.github.io/tempoeval](http
 If you use TempoEval in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{tempoeval2026,
-  title     = {TempoEval: A Comprehensive Framework for Evaluating Temporal Reasoning in RAG Systems},
-  author    = {Author Name},
-  booktitle = {Proceedings of SIGIR 2026},
-  year      = {2026},
-  url       = {https://github.com/DataScienceUIBK/tempoeval}
-}
+soon
 ```
 
 ---
