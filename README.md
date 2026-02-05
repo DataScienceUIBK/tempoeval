@@ -389,12 +389,12 @@ pytest tests/ --cov=tempoeval --cov-report=html
 
 ## 📖 Documentation
 
-Full documentation is available at: **[https://aa17626.github.io/tempoeval](https://aa17626.github.io/tempoeval)**
+Full documentation is available at: **[https://tempoeval.readthedocs.io/en/latest/](https://tempoeval.readthedocs.io/en/latest/)**
 
-- [Getting Started Guide](https://aa17626.github.io/tempoeval/getting-started)
-- [Metrics Reference](https://aa17626.github.io/tempoeval/metrics)
-- [API Documentation](https://aa17626.github.io/tempoeval/api)
-- [TEMPO Benchmark](https://aa17626.github.io/tempoeval/tempo)
+- [Getting Started Guide](https://tempoeval.readthedocs.io/en/latest/getstarted/)
+- [Metrics Reference](https://tempoeval.readthedocs.io/en/latest/concepts/metrics/)
+- [API Documentation](https://tempoeval.readthedocs.io/en/latest/references/api/core/)
+- [Tutorials](https://tempoeval.readthedocs.io/en/latest/tutorials/)
 
 ---
 
@@ -428,7 +428,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Built on top of the [TEMPO Benchmark](https://huggingface.co/datasets/tempo26/Tempo)
+- Built on top of the [TEMPO Benchmark](https://github.com/tempo-bench/Tempo)
 - LLM integrations via [OpenAI](https://openai.com), [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service), and [Anthropic](https://anthropic.com)
 
 ---
