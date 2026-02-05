@@ -1,0 +1,209 @@
+site_name: TempoEval
+site_url: https://datascienceuibk.github.io/tempoeval/
+repo_url: https://github.com/DataScienceUIBK/tempoeval
+repo_name: DataScienceUIBK/tempoeval
+edit_uri: edit/main/docs/
+use_directory_urls: true
+site_description: A comprehensive evaluation framework for temporal RAG systems with 16+ metrics
+site_author: TempoEval Team
+copyright: Copyright &copy; 2026 TempoEval Team
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # TOC
+    - toc.follow
+    - toc.integrate
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    # Instant loading
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+  palette:
+    # Light mode - Blue Grey & Amber (Professional & Sophisticated)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode - Blue Grey & Amber
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: Fira Code
+  icon:
+    logo: material/clock-fast
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section
+      toc_depth: 3
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tempo26/TempoEval
+      name: TempoEval on GitHub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/tempoeval/
+      name: TempoEval on PyPI
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contact@tempoeval.org
+      name: Contact Us
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve by
+            <a href="https://github.com/tempo26/TempoEval/issues/new" target="_blank" rel="noopener">opening an issue</a>.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Get Started:
+      - getstarted/index.md
+      - Installation: getstarted/installation.md
+      - Quick Start: getstarted/quickstart.md
+  - How-to Guides:
+      - tutorials/index.md
+      - Evaluate Retrieval: tutorials/retrieval.md
+      - Evaluate RAG Pipeline: tutorials/rag_pipeline.md
+      - Work with Datasets: tutorials/datasets.md
+  - Core Concepts:
+      - concepts/index.md
+      - Focus Time: concepts/focus_time.md
+      - Computation Modes: concepts/modes.md
+      - Metrics:
+          - concepts/metrics/index.md
+          - Overview: concepts/metrics/overview/index.md
+          - Retrieval:
+              - concepts/metrics/available_metrics/index.md
+              - Temporal Precision: concepts/metrics/available_metrics/temporal_precision.md
+              - Temporal Recall: concepts/metrics/available_metrics/temporal_recall.md
+              - Temporal NDCG: concepts/metrics/available_metrics/temporal_ndcg.md
+              - Temporal MRR: concepts/metrics/available_metrics/temporal_mrr.md
+              - Temporal MAP: concepts/metrics/available_metrics/temporal_map.md
+              - Temporal Year Precision: concepts/metrics/available_metrics/temporal_year_precision.md
+              - Temporal Year Recall: concepts/metrics/available_metrics/temporal_year_recall.md
+              - Temporal Coverage: concepts/metrics/available_metrics/temporal_coverage.md
+              - Anchor Coverage: concepts/metrics/available_metrics/anchor_coverage.md
+              - Temporal Diversity: concepts/metrics/available_metrics/temporal_diversity.md
+              - Temporal Relevance: concepts/metrics/available_metrics/temporal_relevance.md
+              - NDCG Full Coverage: concepts/metrics/available_metrics/ndcg_full_coverage.md
+              - Temporal Persistence: concepts/metrics/available_metrics/temporal_persistence.md
+          - Generation:
+              - Temporal Faithfulness: concepts/metrics/available_metrics/temporal_faithfulness.md
+              - Temporal Hallucination: concepts/metrics/available_metrics/temporal_hallucination.md
+              - Temporal Coherence: concepts/metrics/available_metrics/temporal_coherence.md
+              - Answer Temporal Alignment: concepts/metrics/available_metrics/answer_temporal_alignment.md
+              - Answer Temporal Recall: concepts/metrics/available_metrics/answer_temporal_recall.md
+          - Reasoning:
+              - Event Ordering: concepts/metrics/available_metrics/event_ordering.md
+              - Duration Accuracy: concepts/metrics/available_metrics/duration_accuracy.md
+              - Cross Period Reasoning: concepts/metrics/available_metrics/cross_period_reasoning.md
+              - Temporal Consistency: concepts/metrics/available_metrics/temporal_consistency.md
+          - Composite:
+              - TempoScore: concepts/metrics/available_metrics/tempo_score.md
+  - API Reference:
+      - Core: references/api/core.md
+      - Datasets: references/api/datasets.md
+      - LLM Providers: references/api/llm_providers.md
+      - Retrievers: references/api/retrievers.md
+      - Efficiency: references/api/efficiency.md
+  - Experiments:
+      - experiments/index.md
+      - Extraction Ablation: experiments/extraction_ablation.md
+      - Generation & Reasoning: experiments/generation_reasoning.md

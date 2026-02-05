@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.ragas.io)",
+      "Bash(test:*)",
+      "Bash(python -m mkdocs:*)",
+      "Bash(pip install mkdocs-material)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(pip install:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)"
+    ]
+  }
+}

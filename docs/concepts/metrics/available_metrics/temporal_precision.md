@@ -1,0 +1,85 @@
+# Temporal Precision@K
+
+<span class="metric-badge retrieval">Retrieval Metric</span>
+
+Temporal Precision@K measures the fraction of top-K retrieved documents that are temporally relevant to the query. A document is considered temporally relevant if its Document Focus Time (DFT) overlaps with the Query Focus Time (QFT).
+
+## Formula
+
+$$
+\text{TemporalPrecision@K} = \frac{|\{d \in D_K : \text{rel}(d, q) = 1\}|}{K}
+$$
+
+Where:
+
+- $D_K$ = set of top-K retrieved documents
+- $\text{rel}(d, q) = 1$ if $|QFT \cap DFT_d| > 0$, otherwise 0
+- $QFT$ = Query Focus Time (set of years)
+- $DFT_d$ = Document Focus Time for document $d$
+
+**In simple terms**: What fraction of retrieved documents are from the right time period?
+
+## Inputs
+- `query` and `retrieved_docs` (LLM mode)
+- `temporal_focus` (LLM mode)
+- `qft` and `dfts` (Focus Time mode)
+- `k` (cutoff)
+
+## Output
+- Range: [0, 1], higher is better.
+
+## Prompt (LLM mode)
+```text
+Judge if a retrieved document helps answer the TEMPORAL aspects of a query.
+
+Query: "{query}"
+Temporal Focus: {temporal_focus}
+
+Document:
+{document}
+
+Question: Does this document provide information that DIRECTLY helps answer the temporal aspects of the query?
+
+Guidelines:
+- Verdict = 1 if document contains temporal information (dates, durations, time periods, temporal sequences)
+- Verdict = 0 if document lacks temporal information even if generally relevant
+- For "when" queries: document must mention specific times/dates
+- For "how long" queries: document must mention durations/time periods
+- For "recent" queries: document must mention recency or recent dates
+- Be STRICT: generic facts without temporal markers are NOT temporally relevant
+
+Respond ONLY with valid JSON:
+{
+    "temporal_expressions_found": ["list of temporal expressions found"],
+    "relevance_to_query": "high|medium|low|none",
+    "verdict": 1 or 0,
+    "confidence": 0.0-1.0,
+    "reason": "brief explanation"
+}
+```
+
+## Examples
+### Focus Time
+```python
+from tempoeval.metrics import TemporalPrecision
+
+metric = TemporalPrecision(use_focus_time=True)
+score = metric.compute(qft={2020, 2021}, dfts=[{2020}, {2019}], k=2)
+```
+
+### LLM
+```python
+from tempoeval.metrics import TemporalPrecision
+
+metric = TemporalPrecision()
+metric.llm = llm
+score = await metric.acompute(
+    query="When did X happen?",
+    retrieved_docs=["..."],
+    temporal_focus="specific_time",
+    k=5
+)
+```
+
+!!! note "Synchronous usage"
+    Use `compute(...)` for sync calls and `acompute(...)` for async.

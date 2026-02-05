@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tempoeval"
+version = "0.1.0"
+description = "A comprehensive evaluation framework for temporal IR, QA, and RAG systems"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "TempoEval Team"}
+]
+keywords = [
+    "temporal",
+    "evaluation",
+    "nlp",
+    "question-answering",
+    "information-retrieval",
+    "rag",
+    "llm",
+    "metrics",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "pydantic>=2.0.0",
+    "tqdm>=4.60.0",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0.0"]
+anthropic = ["anthropic>=0.20.0"]
+google = ["google-generativeai>=0.3.0"]
+litellm = ["litellm>=1.0.0"]
+datasets = ["datasets>=2.0.0"]
+all = [
+    "openai>=1.0.0",
+    "anthropic>=0.20.0",
+    "google-generativeai>=0.3.0",
+    "litellm>=1.0.0",
+    "datasets>=2.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/tempoeval"
+"Documentation" = "https://tempoeval.readthedocs.io"
+"Bug Tracker" = "https://github.com/yourusername/tempoeval/issues"
+
+[project.scripts]
+tempoeval = "tempoeval.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tempoeval*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "W", "I", "N", "D", "UP"]
+ignore = ["D100", "D104", "D107"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-v --cov=tempoeval --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

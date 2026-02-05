@@ -1,0 +1,87 @@
+{
+  "id": "q_001",
+  "query": "When did the French Revolution begin?",
+  "query_guidance": {
+    "is_temporal_query": true,
+    "temporal_intent": "when",
+    "query_temporal_signals": [
+      "When",
+      "begin"
+    ],
+    "query_temporal_events": [
+      "French Revolution"
+    ],
+    "query_summary": "The query seeks the start date of the French Revolution.",
+    "temporal_reasoning_class_primary": "event_analysis_and_localization",
+    "temporal_reasoning_class_secondary": [
+      "time_period_contextualization"
+    ],
+    "retrieval_reasoning": "To retrieve temporal evidence, focus on authoritative historical sources that document the start of the French Revolution, ensuring consistency across references.",
+    "retrieval_plan": [
+      {
+        "step": 1,
+        "action": "Identify primary historical records or authoritative secondary sources that specify the start date of the French Revolution."
+      },
+      {
+        "step": 2,
+        "action": "Cross-check the identified date across multiple reliable sources to ensure accuracy and consistency."
+      }
+    ],
+    "key_time_anchors": [
+      "start of the French Revolution"
+    ],
+    "expected_granularity": "date",
+    "quality_checks": [
+      "cross-check dates from multiple sources",
+      "prefer primary/authoritative sources"
+    ]
+  },
+  "gold_passage_annotations": [
+    {
+      "doc_id": "doc_001",
+      "confidence": 1.0,
+      "passage_temporal_signals": [
+        "in 1789",
+        "on July 14"
+      ],
+      "passage_temporal_events": [
+        "storming of the Bastille"
+      ],
+      "time_mentions": [
+        "1789",
+        "July 14"
+      ],
+      "time_scope_guess": {
+        "start_iso": "1789",
+        "end_iso": "",
+        "granularity": "year"
+      },
+      "tense_guess": "past"
+    }
+  ],
+  "negative_passage_annotations": [
+    {
+      "doc_id": "doc_002",
+      "confidence": 0.9,
+      "passage_temporal_signals": [
+        "in 27 BC",
+        "in 1453 AD"
+      ],
+      "passage_temporal_events": [
+        "reign of Augustus",
+        "fall of Constantinople"
+      ],
+      "time_mentions": [
+        "27 BC",
+        "1453 AD",
+        "1,500 years"
+      ],
+      "time_scope_guess": {
+        "start_iso": "",
+        "end_iso": "",
+        "granularity": "unknown"
+      },
+      "tense_guess": "past"
+    }
+  ]
+}

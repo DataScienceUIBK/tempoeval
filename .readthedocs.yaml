@@ -1,0 +1,21 @@
+# ReadTheDocs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html
+
+version: 2
+
+# Set the OS, Python version and other tools
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.10"
+
+# Build documentation in the docs/ directory with MkDocs
+mkdocs:
+  configuration: mkdocs.yml
+
+# Install dependencies
+python:
+  install:
+    - requirements: docs/requirements.txt
+    - method: pip
+      path: .

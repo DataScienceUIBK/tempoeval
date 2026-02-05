@@ -1,0 +1,280 @@
+/* TempoEval Custom Styles */
+/* Unique branding and design for TempoEval documentation */
+
+:root {
+  /* Custom color palette - Blue Grey & Amber theme */
+  --temporal-primary: #607d8b;
+  --temporal-primary-dark: #455a64;
+  --temporal-accent: #ffc107;
+  --temporal-accent-dark: #ffa000;
+  --temporal-gradient: linear-gradient(135deg, #607d8b 0%, #90a4ae 100%);
+  --temporal-code-bg: #f5f2f0;
+}
+
+[data-md-color-scheme="slate"] {
+  --temporal-code-bg: #2e2e2e;
+}
+
+/* Hero section on home page */
+.md-typeset .hero-banner {
+  background: var(--temporal-gradient);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.md-typeset .hero-banner h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset .hero-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Feature cards */
+.md-typeset .grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.md-typeset .grid.cards > ul {
+  display: contents;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--temporal-primary);
+  box-shadow: 0 4px 12px rgba(103, 58, 183, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Code blocks enhancement */
+.md-typeset code {
+  background-color: var(--temporal-code-bg);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+}
+
+.md-typeset pre > code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Admonitions customization */
+.md-typeset .admonition.temporal {
+  border-left-color: var(--temporal-primary);
+}
+
+.md-typeset .admonition.temporal > .admonition-title {
+  background-color: rgba(103, 58, 183, 0.1);
+}
+
+.md-typeset .admonition.temporal > .admonition-title::before {
+  background-color: var(--temporal-primary);
+}
+
+/* Metric badges */
+.md-typeset .metric-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
+.md-typeset .metric-badge.retrieval {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.md-typeset .metric-badge.generation {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.md-typeset .metric-badge.reasoning {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.md-typeset .metric-badge.composite {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .metric-badge.retrieval {
+  background-color: rgba(25, 118, 210, 0.2);
+  color: #90caf9;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .metric-badge.generation {
+  background-color: rgba(123, 31, 162, 0.2);
+  color: #ce93d8;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .metric-badge.reasoning {
+  background-color: rgba(230, 81, 0, 0.2);
+  color: #ffb74d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .metric-badge.composite {
+  background-color: rgba(46, 125, 50, 0.2);
+  color: #a5d6a7;
+}
+
+/* Table enhancements */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--temporal-gradient);
+  color: white;
+  font-weight: 600;
+}
+
+/* Button customization */
+.md-typeset .md-button--primary {
+  background: var(--temporal-gradient);
+  border: none;
+  font-weight: 600;
+}
+
+.md-typeset .md-button--primary:hover {
+  background: var(--temporal-primary-dark);
+  transform: scale(1.05);
+}
+
+/* Timeline for temporal concepts */
+.md-typeset .timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 2rem 0;
+}
+
+.md-typeset .timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--temporal-gradient);
+}
+
+.md-typeset .timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.md-typeset .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.375rem;
+  top: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--temporal-accent);
+  border: 3px solid var(--md-default-bg-color);
+}
+
+/* Formula boxes */
+.md-typeset .formula-box {
+  background-color: rgba(103, 58, 183, 0.05);
+  border-left: 4px solid var(--temporal-primary);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+}
+
+/* Comparison tables */
+.md-typeset .comparison-table td:first-child {
+  font-weight: 600;
+  background-color: rgba(103, 58, 183, 0.05);
+}
+
+/* Icon styling */
+.md-typeset .icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-typeset .icon-text .twemoji {
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+/* Announcement bar */
+.md-banner {
+  background: var(--temporal-gradient);
+  color: white;
+}
+
+.md-banner__inner {
+  color: white;
+}
+
+/* Navigation tabs enhancement */
+.md-tabs {
+  background: var(--temporal-gradient);
+}
+
+/* Footer customization */
+.md-footer {
+  background-color: var(--temporal-primary-dark);
+}
+
+.md-footer-meta {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Search box */
+.md-search__form {
+  border-radius: 2rem;
+}
+
+/* TOC highlight */
+.md-nav__link--active {
+  color: var(--temporal-primary) !important;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset .hero-banner h1 {
+    font-size: 2rem;
+  }
+
+  .md-typeset .grid.cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-typeset .hero-banner {
+    background: white;
+    color: black;
+    border: 2px solid var(--temporal-primary);
+  }
+}

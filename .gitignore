@@ -1,0 +1,54 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Build and distribution
+dist/
+build/
+*.egg-info/
+tempoeval.egg-info/
+temporaleval.egg-info/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Logs and output
+logs/
+output/
+*.log
+
+# Experiments (user-specific)
+experiments/
+
+# Large files
+*.json.gz
+*.pkl
+*.pt
+*.bin

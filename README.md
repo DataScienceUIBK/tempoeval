@@ -10,8 +10,8 @@
 
 <p align="center">
   <a href="https://pypi.org/project/tempoeval/"><img src="https://img.shields.io/pypi/v/tempoeval?style=flat-square&logo=pypi&logoColor=white&color=blue" alt="PyPI Version"/></a>
-  <a href="https://github.com/aa17626/tempoeval"><img src="https://img.shields.io/github/stars/aa17626/tempoeval?style=flat-square&logo=github&color=yellow" alt="GitHub Stars"/></a>
-  <a href="https://github.com/aa17626/tempoeval/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/DataScienceUIBK/tempoeval"><img src="https://img.shields.io/github/stars/DataScienceUIBK/tempoeval?style=flat-square&logo=github&color=yellow" alt="GitHub Stars"/></a>
+  <a href="https://github.com/DataScienceUIBK/tempoeval/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"/></a>
   <a href="https://python.org"><img src="https://img.shields.io/badge/python-3.9+-blue?style=flat-square&logo=python&logoColor=white" alt="Python Version"/></a>
   <a href="https://arxiv.org/abs/xxxx.xxxxx"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="arXiv"/></a>
 </p>
@@ -92,7 +92,7 @@ pip install tempoeval
 ### From Source
 
 ```bash
-git clone https://github.com/aa17626/tempoeval.git
+git clone https://github.com/DataScienceUIBK/tempoeval.git
 cd tempoeval
 pip install -e .
 ```
@@ -408,7 +408,7 @@ If you use TempoEval in your research, please cite our paper:
   author    = {Author Name},
   booktitle = {Proceedings of SIGIR 2026},
   year      = {2026},
-  url       = {https://github.com/aa17626/tempoeval}
+  url       = {https://github.com/DataScienceUIBK/tempoeval}
 }
 ```
 
@@ -444,7 +444,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 </p>
 
 <p align="center">
-  <a href="https://github.com/aa17626/tempoeval">
+  <a href="https://github.com/DataScienceUIBK/tempoeval">
     <img src="https://img.shields.io/badge/⭐_Star_on_GitHub-000?style=for-the-badge&logo=github" alt="Star on GitHub"/>
   </a>
 </p>
