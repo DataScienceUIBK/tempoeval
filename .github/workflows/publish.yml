@@ -4,11 +4,6 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version to publish (leave empty for current version)'
-        required: false
-        type: string
 
 jobs:
   build:
@@ -40,32 +35,9 @@ jobs:
         name: python-package-distributions
         path: dist/
 
-  publish-testpypi:
-    name: Publish to TestPyPI 🧪
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: testpypi
-      url: https://test.pypi.org/p/tempoeval
-    permissions:
-      id-token: write
-    
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: python-package-distributions
-        path: dist/
-    
-    - name: Publish to TestPyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        repository-url: https://test.pypi.org/legacy/
-        skip-existing: true
-
   publish-pypi:
     name: Publish to PyPI 🚀
-    needs: [build, publish-testpypi]
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: pypi
